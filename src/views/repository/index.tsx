@@ -36,8 +36,6 @@ const Repository = () => {
     }
   }, []);
 
-  console.log(branches, repositoryData);
-
   return (
     <Container>
       <InnerWrapper>
