@@ -9,9 +9,9 @@ const BranchStatus = ({ branches }: BranchStatusProps) => {
   return (
     <Container>
       <div>
-        <Status>In Progress ({branches?.length})</Status> // Displays the number of branches
+        <Status>In Progress ({branches?.length})</Status>
         {branches?.map((branch) => ( 
-          <Card key={branch} text={branch} /> // Creates a card for each branch
+          <Card key={branch} text={branch} />
         ))}
       </div>
       <div></div>
