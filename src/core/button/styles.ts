@@ -20,6 +20,7 @@ export const Button = styled("button", {
   border: "none",
   marginLeft: "10px",
   cursor: "pointer",
+  transition: "all 0.2s ease-in-out",
 
   variants: {
     size: {

@@ -12,7 +12,7 @@ import {
 } from "./styles";
 import star from "../../assets/star.svg";
 import backArrow from "../../assets/back-arrow.svg";
-import Card from "../../core/card";
+import BranchStatus from "../../components/statuses";
 
 const Repository = () => {
   const navigate = useNavigate();
@@ -40,28 +40,20 @@ const Repository = () => {
 
   return (
     <Container>
-        <InnerWrapper>
-          <BackArrow
-            src={backArrow}
-            alt="go-back"
-            onClick={() => navigate(-1)}
-          />
-          <RepositoryDataWrapper>
-            <RepositoryName>{repositoryData.name}</RepositoryName>
-            <RepositoryDescription>
-              {repositoryData.description}
-            </RepositoryDescription>
-          </RepositoryDataWrapper>
-          <StarCountWrapper>
-            <img src={star} alt="stars-count" />
-            <StarCountText>{repositoryData.stargazers_count}</StarCountText>
-          </StarCountWrapper>
-        </InnerWrapper>
-        <div>
-          {branches.map((branch) => (
-            <Card key={branch} text={branch} />
-          ))}
-        </div>
+      <InnerWrapper>
+        <BackArrow src={backArrow} alt="go-back" onClick={() => navigate(-1)} />
+        <RepositoryDataWrapper>
+          <RepositoryName>{repositoryData.name}</RepositoryName>
+          <RepositoryDescription>
+            {repositoryData.description}
+          </RepositoryDescription>
+        </RepositoryDataWrapper>
+        <StarCountWrapper>
+          <img src={star} alt="stars-count" />
+          <StarCountText>{repositoryData.stargazers_count}</StarCountText>
+        </StarCountWrapper>
+      </InnerWrapper>
+      <BranchStatus branches={branches} />
     </Container>
   );
 };

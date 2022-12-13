@@ -2,7 +2,6 @@ import { styled } from "../../stitches.config";
 
 export const Container = styled("div", {
   display: "flex",
-  flexDirection: "row",
   justifyContent: "space-between",
   alignItems: "center",
   padding: "24px",
@@ -18,4 +17,24 @@ export const Container = styled("div", {
   "&:hover": {
     background: "#D1D1D1",
   },
+});
+
+export const BackChevron = styled("img", {
+  variants: {
+    status: {
+      inProgress: {
+        opacity: "0.1",
+      },
+    },
+  },
+});
+
+export const BranchName = styled("p", {
+  fontFamily: "Inter",
+  fontStyle: "normal",
+  fontWeight: "400",
+  fontSize: "16px",
+  lineHeight: "22px",
+  letterSpacing: "-0.0125em",
+  color: "#515151",
 });
